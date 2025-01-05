@@ -1,0 +1,19 @@
+<html>
+<script>
+   async function fetchsss(){
+    const response = await fetch( "http://localhost:3000/calcu?principal=100&rate=5&time=2");
+    const ans =await response.json();
+    document.getElementById("output").innerHTML = "<p>Interest" + ans.interest + "</p>" + 
+    "<p>Total: " + ans.total + "</p>";
+
+    document.getElementById("output").innerHTML = JSON.stringify(ans);
+   }
+   //ivi direct values teskuntunnam ala kaakunda, normal ga text lu kuda teskoni teskochu, appud differne osthai
+    
+   fetchsss();
+</script>
+<body>
+    <p>hi</p>
+    <div id="output"></div>
+</body>
+</html>
